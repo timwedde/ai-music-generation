@@ -1,3 +1,6 @@
 [submodule "composer"]
 	path = composer
 	url = git@github.com:timwedde/composer.git
+[submodule "pydicsv"]
+	path = pydicsv
+	url = git@github.com:timwedde/pydicsv.git
