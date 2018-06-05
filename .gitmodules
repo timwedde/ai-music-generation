@@ -4,3 +4,6 @@
 [submodule "pydicsv"]
 	path = pydicsv
 	url = git@github.com:timwedde/pydicsv.git
+[submodule "banana-split"]
+	path = banana-split
+	url = git@github.com:timwedde/banana-split.git
