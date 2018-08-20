@@ -154,12 +154,12 @@ def move_to_folder(file, folder):
 
 def filter_instruments(file):
     instrument = get_instrument(file)
-    if not instrument:
+    if not instrument and dirname(file["path"]).split(sep)[-1] != "channel_9":
         return
-    if instrument in [*list(range(33, 41)), 44, 59, 68]:
+    if instrument in [*list(range(33, 41)), 44, 59, 68, 88]:
         file["name"] = "{}_{}.csv".format(dirname(file["path"]).split(sep)[-2], file["name"])
         move_to_folder(file, join(args.output_dir, "bass"))
-    elif instrument in [*list(range(57, 65)), *list(range(0, 9)), 73, 74]:
+    elif instrument in [*list(range(57, 65)), *list(range(0, 9)), 73, 74, *list(range(81, 88)), *list(range(89, 97))]:
         file["name"] = "{}_{}.csv".format(dirname(file["path"]).split(sep)[-2], file["name"])
         move_to_folder(file, join(args.output_dir, "melody"))
     elif dirname(file["path"]).split(sep)[-1] == "channel_9":
